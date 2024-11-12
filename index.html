@@ -28,7 +28,7 @@
                 $("body").load(url, function(event) {
                     window.scrollTo(0, 0);
                     history.pushState(null, "", url);
-                    document.title = ('title').text();
+                    document.title = $('title').text();
                 });
             }
     
@@ -51,6 +51,10 @@
           <div class="navbar-start">
             <a href="/" class="navbar-item is-rounded">
               Home
+            </a>
+
+            <a href="/about" class="navbar-item is-rounded">
+              About
             </a>
       
             <a href="https://twitter.com/sussteve226" target="_blank" class="navbar-item has-background-primary has-text-black is-rounded">
