@@ -20,6 +20,31 @@
           background-image: url("https://pbs.twimg.com/profile_images/1856461944900694016/ZeqnUDy6_400x400.jpg");
         }
       </style>
+      <script>
+        document.addEventListener("DOMContentLoaded", function() {
+          $(document).ready(function() {
+            function load(url) {
+                document.title = "";
+                $("body").load(url, function(event) {
+                    window.scrollTo(0, 0);
+                    history.pushState(null, "", url);
+                    document.title = ('title').text();
+                });
+            }
+    
+            $(document).on('click', 'a', function(event) {
+                var url = $(this).attr("href");
+                event.preventDefault();
+                load(url);
+            });
+
+
+        		window.addEventListener("popstate", function() {
+                    load(location.pathname + location.search);
+        		});
+          });
+        });
+      </script>
       <nav class="navbar" role="navigation" aria-label="main navigation">
 
         <div id="navbarBasicExample" class="navbar-menu">
