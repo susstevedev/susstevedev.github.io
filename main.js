@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function() {
           background-size: cover;
           background-image: url("https://pbs.twimg.com/profile_images/1856461944900694016/ZeqnUDy6_400x400.jpg");
         }
-      </style>';        
+      </style>');        
         
           $(document).ready(function() {
             function load(url) {
@@ -62,5 +62,5 @@ document.addEventListener("DOMContentLoaded", function() {
             </a>
             </div>
           </div>
-      </nav>';
+      </nav>');
   });
