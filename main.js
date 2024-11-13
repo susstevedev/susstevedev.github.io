@@ -28,6 +28,6 @@
           });
          });
 
-navbar = '<nav class="navbar" role="navigation" aria-label="main navigation"><div id="navbarBasicExample" class="navbar-menu"><div class="navbar-start"><a href="/" class="navbar-item is-rounded">&nbsp;Home&nbsp;</a><a href="/about" class="navbar-item is-rounded">&nbsp;About&nbsp;</a><a href="/projects/" class="navbar-item is-rounded">Projects</a><a href="https://twitter.com/Evan85908317" target="_blank" class="navbar-item has-background-primary has-text-black is-rounded">&nbsp;Twitter&nbsp;</a><a href="http://www.gr8brik.rf.gd/@Admin" target="_blank" class="navbar-item has-background-primary has-text-black is-rounded">&nbsp;GR8BRIK&nbsp;</a></div></div>';
+const navbar = '<div id="navbarBasicExample" class="navbar-menu"><div class="navbar-start"><a href="/" class="navbar-item is-rounded">&nbsp;Home&nbsp;</a><a href="/about" class="navbar-item is-rounded">&nbsp;About&nbsp;</a><a href="/projects/" class="navbar-item is-rounded">Projects</a><a href="https://twitter.com/Evan85908317" target="_blank" class="navbar-item has-background-primary has-text-black is-rounded">&nbsp;Twitter&nbsp;</a><a href="http://www.gr8brik.rf.gd/@Admin" target="_blank" class="navbar-item has-background-primary has-text-black is-rounded">&nbsp;GR8BRIK&nbsp;</a></div></div>';
 
 document.getElementsByClassName("navbar").innerHTML = navbar;
