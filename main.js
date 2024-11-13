@@ -1,14 +1,13 @@
    
         document.addEventListener("DOMContentLoaded", function() {
           $(document).ready(function() {
-            nav();
             function load(url) {
                 document.title = "";
                 $("body").load(url, function(event) {
+                     nav();
                     window.scrollTo(0, 0);
                     history.pushState(null, "", url);
                     document.title = $('title').text();
-                    nav();
                 });
             }
     
