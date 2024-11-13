@@ -27,6 +27,14 @@
         		});
           });
          });
+var tmp = document.write;
+
+document.write = function () {
+  document.getElementById('someId').innerHTML = [].concat.apply([], arguments).join('');
+};
+
+document.write = tmp;
+
 function nav() {
       document.write("<style> .twitter-pfp { width: 100px;height: 100px;border-radius: 50%;background-repeat: no-repeat;background-size: cover;background-image: url('https://pbs.twimg.com/profile_images/1856461944900694016/ZeqnUDy6_400x400.jpg'); } </style>");  
 
