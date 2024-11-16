@@ -10,7 +10,7 @@
   <body>
   <section class="section">
     <div class="container">
-      <style>
+<style>
         .twitter-pfp {
           width: 100px;
           height: 100px;
@@ -35,7 +35,6 @@
             $(document).on('click', 'a', function(event) {
                 var url = $(this).attr("href");
                 if (!url || url.match("^http")) {
-                  document.title = "";
                   document.title = $('title').text();
                   return;
                 }
@@ -76,7 +75,8 @@
             </div>
           </div>
       </nav>
-      <h1 class="title is-1">evanrutledge1 -> about</h1>
+      <div class="title is-1">Home -> About</div>
+      <suv class="hidden"></suv>
     </div>
   </section>
   </body>
