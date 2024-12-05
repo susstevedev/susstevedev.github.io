@@ -18,7 +18,7 @@
       "type": "image/png"
     }
   ],
-  "start_url": "https://www.gr8brik.rf.gd/",
+  "start_url": "https://www.gr8brik.rf.gd/feed.php",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#ffffff",
