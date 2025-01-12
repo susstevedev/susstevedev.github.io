@@ -1,6 +1,6 @@
 {
   "short_name": "Gr8brik",
-  "name": "GR8BRIK PWA app",
+  "name": "Gr8brik app b1.1",
   "icons": [
     {
       "src": "https://www.gr8brik.rf.gd/img/logo/512.png",
@@ -18,7 +18,7 @@
       "type": "image/png"
     }
   ],
-  "start_url": "https://www.gr8brik.rf.gd/feed.php",
+  "start_url": "https://www.gr8brik.rf.gd/feed",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#ffffff",
