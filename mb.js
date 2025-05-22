@@ -1,4 +1,4 @@
-fetch('https://mecabricks.weetpix.com/en/user/sse2cpu')
+fetch('https://corsproxy.io/?url=https://mecabricks.weetpix.com/en/user/sse2cpu')
   .then(response => response.text())
   .then(html => {
     const parser = new DOMParser();
