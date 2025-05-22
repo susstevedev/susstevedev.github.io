@@ -11,6 +11,6 @@ fetch('https://corsproxy.io/?url=https://mecabricks.weetpix.com/en/user/sse2cpu'
       embed.width = "600";
       embed.height = "400";
       embed.style.border = "none";
-      document.body.appendChild(embed);
+      document.querySelector('.embed').appendChild(embed);
     }
   });
