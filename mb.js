@@ -8,6 +8,8 @@ fetch('https://corsproxy.io/?url=https://mecabricks.weetpix.com/en/user/sse2cpu'
     if (first) {
       const embed = document.createElement('iframe');
       embed.src = `https://mecabricks.weetpix.com/${navigator.language.split("-")[0]}/player/${first.split('/').pop()}`;
+      embed.width = '640';
+      embed.height = '480';
       document.querySelector('.embed').appendChild(embed);
     }
   });
