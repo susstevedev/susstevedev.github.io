@@ -7,7 +7,7 @@ fetch('https://corsproxy.io/?url=https://mecabricks.weetpix.com/en/user/sse2cpu'
   
     if (first) {
       const embed = document.createElement('iframe');
-      embed.src = first;
+      embed.src = `https://www.mecabricks.com/en/player/${first.split('/').pop()}`;
       embed.width = "600";
       embed.height = "400";
       embed.style.border = "none";
