@@ -25,7 +25,7 @@ function fetch_bio(username) {
       const bio = doc.querySelector('#card-about') ? doc.querySelector('#card-about') : null;
     
       if (bio) {
-        document.querySelector('.bio').text(bio);
+        document.querySelector('.bio').innerText(bio);
       }
     });
 }
