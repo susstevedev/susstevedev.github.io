@@ -15,6 +15,21 @@ function fetch_models(username) {
       }
     });
 }
+
+function fetch_bio(username) {
+  fetch(`https://corsproxy.io/?url=https://mecabricks.weetpix.com/en/user/${username}`)
+    .then(response => response.text())
+    .then(html => {
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(html, 'text/html');
+      const bio = doc.querySelector('#card-about') ? doc.querySelector('#card-about') : null;
+    
+      if (bio) {
+        document.querySelector('.bio').text(bio);
+      }
+    });
+}
+
 function fetch_pfp(username) {
   fetch(`https://corsproxy.io/?url=https://mecabricks.com/en/user/${username}`)
   .then(response => response.text())
@@ -30,4 +45,5 @@ function fetch_pfp(username) {
 }
 
 fetch_pfp('sse2cpu');
+fetch_bio('sse2cpu');
 fetch_models('sse2cpu');
