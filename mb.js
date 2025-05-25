@@ -1,12 +1,12 @@
 function fetch_user_page(username) {
-   return fetch(`https://corsproxy.io/?url=example.com/@${username}`)
+   return fetch(`https://corsproxy.io/?url=https://mecabricks.weetpix.com/en/user/${username}`)
     .then(response => response.text());
 }
 
 function fetch_models(username) {
-  fetch_user_page("johndoe").then(html => {
+  fetch_user_page(username).then(html => {
      const parser = new DOMParser();
-     const doc = parser.parseFromString(phtml, 'text/html');
+     const doc = parser.parseFromString(html, 'text/html');
      const first = doc.querySelector('.gallery-item a') ? doc.querySelector('.gallery-item a').href : null;
        
      if (first) {
@@ -20,23 +20,19 @@ function fetch_models(username) {
 }
 
 function fetch_bio(username) {
-  fetch(`https://corsproxy.io/?url=https://mecabricks.weetpix.com/en/user/${username}`)
-    .then(response => response.text())
-    .then(html => {
+   fetch_user_page(username).then(html => {
       const parser = new DOMParser();
       const doc = parser.parseFromString(html, 'text/html');
       const bio = doc.querySelector('#card-about') ? doc.querySelector('#card-about') : null;
     
       if (bio) {
-        document.querySelector('.bio').innerText = bio.innerText;
+         document.querySelector('.bio').innerText = bio.innerText;
       }
-    });
+   });
 }
 
 function fetch_pfp(username) {
-  fetch(`https://corsproxy.io/?url=https://mecabricks.com/en/user/${username}`)
-  .then(response => response.text())
-  .then(html => {
+  fetch_user_page(username).then(html => {
     const parser = new DOMParser();
     const doc = parser.parseFromString(html, 'text/html');
     const url = doc.querySelector('#card-avatar').style.backgroundImage.slice(5, -2) ? doc.querySelector('#card-avatar').style.backgroundImage : null;
