@@ -1,24 +1,22 @@
 function fetch_user_page(username) {
-   fetch(`https://corsproxy.io/?url=https://mecabricks.weetpix.com/en/user/${username}`)
-    .then(response => response.text())
-    .then(html => {
-      return html;
-    });
+   return fetch(`https://corsproxy.io/?url=example.com/@${username}`)
+    .then(response => response.text());
 }
 
 function fetch_models(username) {
-  const phtml = fetch_user_page(username);
-  const parser = new DOMParser();
-  const doc = parser.parseFromString(phtml, 'text/html');
-  const first = doc.querySelector('.gallery-item a') ? doc.querySelector('.gallery-item a').href : null;
-    
-  if (first) {
-    const embed = document.createElement('iframe');
-    embed.src = `https://mecabricks.weetpix.com/${navigator.language.split("-")[0]}/player/${first.split('/').pop()}`;
-    embed.width = '640';
-    embed.height = '480';
-    document.querySelector('.embed').appendChild(embed);
-  }
+  fetch_user_page("johndoe").then(html => {
+     const parser = new DOMParser();
+     const doc = parser.parseFromString(phtml, 'text/html');
+     const first = doc.querySelector('.gallery-item a') ? doc.querySelector('.gallery-item a').href : null;
+       
+     if (first) {
+       const embed = document.createElement('iframe');
+       embed.src = `https://mecabricks.weetpix.com/${navigator.language.split("-")[0]}/player/${first.split('/').pop()}`;
+       embed.width = '640';
+       embed.height = '480';
+       document.querySelector('.embed').appendChild(embed);
+     }
+  });
 }
 
 function fetch_bio(username) {
