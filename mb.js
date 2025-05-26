@@ -3,7 +3,7 @@ let user_name = 'sse2cpu';
 
 function fetch_user_page(user_name) {
   if (!user_page) {
-    user_page = fetch(`https://corsproxy.io/?url=https://mecabricks.weetpix.com/en/user/${username}`)
+    user_page = fetch(`https://corsproxy.io/?url=https://mecabricks.weetpix.com/en/user/${user_name}`)
       .then(response => response.text());
   }
   return user_page;
@@ -50,7 +50,7 @@ function fetch_pfp() {
 }
 
 fetch_user_page(user_name).then(user_page => {
-  fetch_pfp('sse2cpu');
-  fetch_bio('sse2cpu');
-  fetch_models('sse2cpu');
+  fetch_pfp();
+  fetch_bio();
+  fetch_models();
 });
