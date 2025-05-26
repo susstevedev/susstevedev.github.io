@@ -1,6 +1,7 @@
 let user_page;
+let user_name = 'sse2cpu';
 
-function fetch_user_page(username) {
+function fetch_user_page(user_name) {
   if (!user_page) {
     user_page = fetch(`https://corsproxy.io/?url=https://mecabricks.weetpix.com/en/user/${username}`)
       .then(response => response.text());
@@ -8,7 +9,7 @@ function fetch_user_page(username) {
   return user_page;
 }
 
-function fetch_models(username) {
+function fetch_models() {
   //fetch_user_page(username).then(html => {
      const parser = new DOMParser();
      const doc = parser.parseFromString(user_page, 'text/html');
@@ -24,7 +25,7 @@ function fetch_models(username) {
   //});
 }
 
-function fetch_bio(username) {
+function fetch_bio() {
    //fetch_user_page(username).then(html => {
       const parser = new DOMParser();
       const doc = parser.parseFromString(user_page, 'text/html');
@@ -36,7 +37,7 @@ function fetch_bio(username) {
    //});
 }
 
-function fetch_pfp(username) {
+function fetch_pfp() {
   //fetch_user_page(username).then(html => {
     const parser = new DOMParser();
     const doc = parser.parseFromString(user_page, 'text/html');
@@ -48,7 +49,7 @@ function fetch_pfp(username) {
   //});
 }
 
-fetch_user_page(username).then(user_page => {
+fetch_user_page(user_name).then(user_page => {
   fetch_pfp('sse2cpu');
   fetch_bio('sse2cpu');
   fetch_models('sse2cpu');
