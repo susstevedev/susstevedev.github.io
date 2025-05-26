@@ -1,5 +1,11 @@
+let uri = new URLSearchParams(window.location.search);
 let user_page;
-let user_name = 'sse2cpu';
+
+if(uri.has('name')) {
+  user_name = uri.get('name');
+} else {
+  let user_name = 'sse2cpu';
+}
 
 function fetch_user_page(user_name) {
   if (!user_page) {
