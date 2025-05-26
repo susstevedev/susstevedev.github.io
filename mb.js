@@ -10,7 +10,7 @@ function fetch_user_page(user_name) {
 }
 
 function fetch_models() {
-  //fetch_user_page(username).then(html => {
+  fetch_user_page(user_name).then(user_page => {
      const parser = new DOMParser();
      const doc = parser.parseFromString(user_page, 'text/html');
      const first = doc.querySelector('.gallery-item a') ? doc.querySelector('.gallery-item a').href : null;
@@ -22,11 +22,11 @@ function fetch_models() {
        embed.height = '480';
        document.querySelector('.embed').appendChild(embed);
      }
-  //});
+  });
 }
 
 function fetch_bio() {
-   //fetch_user_page(username).then(html => {
+   fetch_user_page(user_name).then(user_page => {
       const parser = new DOMParser();
       const doc = parser.parseFromString(user_page, 'text/html');
       const bio = doc.querySelector('#card-about') ? doc.querySelector('#card-about') : null;
@@ -34,11 +34,11 @@ function fetch_bio() {
       if (bio) {
          document.querySelector('.bio').innerText = bio.innerText;
       }
-   //});
+   });
 }
 
 function fetch_pfp() {
-  //fetch_user_page(username).then(html => {
+  fetch_user_page(user_name).then(user_page => {
     const parser = new DOMParser();
     const doc = parser.parseFromString(user_page, 'text/html');
     const url = doc.querySelector('#card-avatar').style.backgroundImage.slice(5, -2) ? doc.querySelector('#card-avatar').style.backgroundImage : null;
@@ -46,11 +46,9 @@ function fetch_pfp() {
     if(url) {
       document.querySelector('.twitter-pfp').style.backgroundImage = url;
     }
-  //});
+  });
 }
 
-fetch_user_page(user_name).then(user_page => {
   fetch_pfp();
   fetch_bio();
   fetch_models();
-});
