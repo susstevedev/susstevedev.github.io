@@ -1,14 +1,10 @@
 //document.addEventListener("DOMContentLoaded", (event) => {
+  let search_params;
+  let user_page;    
+  let user_name;
+
   if(!search_params) {
     let search_params = new URLSearchParams(window.location.search);
-  }
-
-  if(!user_page) {
-    let user_page;
-  }
-
-  if(!user_name) {
-    let user_name;
   }
   
   if(search_params.has('name')) {
