@@ -48,6 +48,8 @@ function fetch_pfp(username) {
   //});
 }
 
-fetch_pfp('sse2cpu');
-fetch_bio('sse2cpu');
-fetch_models('sse2cpu');
+fetch_user_page(username).then(user_page => {
+  fetch_pfp('sse2cpu');
+  fetch_bio('sse2cpu');
+  fetch_models('sse2cpu');
+}
