@@ -4,7 +4,7 @@
   let user_name;
 
   if(!search_params) {
-    let search_params = new URLSearchParams(window.location.search);
+    search_params = new URLSearchParams(window.location.search);
   }
   
   if(search_params.has('name')) {
