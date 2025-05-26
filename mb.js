@@ -12,7 +12,7 @@ function fetch_user_page(user_name) {
 function update_name() {
   fetch_user_page(user_name).then(user_page => {
     document.querySelector('#username-content').innerText = user_name;
-  }
+  });
 }
 
 function fetch_models() {
