@@ -9,6 +9,12 @@ function fetch_user_page(user_name) {
   return user_page;
 }
 
+function update_name() {
+  fetch_user_page(user_name).then(user_page => {
+    document.querySelector('#username-content').innerText = user_name;
+  }
+}
+
 function fetch_models() {
   fetch_user_page(user_name).then(user_page => {
      const parser = new DOMParser();
@@ -52,3 +58,4 @@ function fetch_pfp() {
   fetch_pfp();
   fetch_bio();
   fetch_models();
+  update_name();
