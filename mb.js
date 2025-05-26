@@ -1,4 +1,5 @@
 //document.addEventListener("DOMContentLoaded", (event) => {
+(function() {
   let search_params;
   let user_page;    
   let user_name;
@@ -72,3 +73,4 @@
     fetch_models();
     update_name();
 //});
+})();
