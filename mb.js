@@ -1,14 +1,22 @@
-document.addEventListener("DOMContentLoaded", (event) => {
-  let uri = new URLSearchParams(window.location.search);
-  let user_page;
-  let user_name;
+//document.addEventListener("DOMContentLoaded", (event) => {
+  if(!search_params) {
+    let search_params = new URLSearchParams(window.location.search);
+  }
+
+  if(!user_page) {
+    let user_page;
+  }
+
+  if(!user_name) {
+    let user_name;
+  }
   
-  if(uri.has('name')) {
-    user_name = uri.get('name');
+  if(search_params.has('name')) {
+    user_name = search_params.get('name');
   } else {
     user_name = 'sse2cpu';
   }
-  
+
   function fetch_user_page(user_name) {
     if (!user_page) {
       user_page = fetch(`https://corsproxy.io/?url=https://mecabricks.weetpix.com/en/user/${user_name}`)
@@ -67,4 +75,4 @@ document.addEventListener("DOMContentLoaded", (event) => {
     fetch_bio();
     fetch_models();
     update_name();
-});
+//});
