@@ -51,7 +51,10 @@
         const bio = doc.querySelector('#card-about') ? doc.querySelector('#card-about') : null;
       
         if (bio) {
-           document.querySelector('.bio').innerText = bio.innerText;
+           //bio history below
+            // before 8/5/25
+            // Hi I do web development. I also like Lego. Jesus and (old era) Kanye glazer.
+             document.querySelector('.bio').innerText = bio.innerText;
         }
      });
   }
