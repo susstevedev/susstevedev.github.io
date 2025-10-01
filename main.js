@@ -24,5 +24,4 @@ document.addEventListener("DOMContentLoaded", function() {
    });
 });
 
-//base64 encoded version of my old bio
-let legacy_bio = "SGkgSSBkbyB3ZWIgZGV2ZWxvcG1lbnQuIEkgYWxzbyBsaWtlIExlZ28uIEplc3VzIGFuZCAob2xkIGVyYSkgS2FueWUgZ2xhemllci4gMTMgeWVhcnMgb2YgYWdlLCBhbHNvIGJpc2V4dWFsLiBMaWJlcmFsLg==";
+let bio_legacy = "SGkgSSBkbyB3ZWIgZGV2ZWxvcG1lbnQuIEkgYWxzbyBsaWtlIExlZ28uIEplc3VzIGFuZCAob2xkIGVyYSkgS2FueWUgZ2xhemllci4gQWxzbyBJJ20gYmlzZXh1YWw=";
