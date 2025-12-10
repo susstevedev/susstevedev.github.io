@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
        var navbar = $('[data-testid="navbar"]');
        if(navbar) {
-          navbar.load("/navbar.html");
+          navbar.load("/nav.html");
        } else {
           console.error("Navigation bar not found on page!");
        }
