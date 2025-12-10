@@ -1,0 +1,14 @@
+@import "https://cdn.jsdelivr.net/npm/bulma@latest/css/bulma.min.css";
+.pfp {
+  width: 100px;
+  height: 100px;
+  border-radius: 6px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("/img/");
+}
+svg {
+  width: 16px;
+  height: 16px;
+  fill: var(--bulma-body-color);
+}
