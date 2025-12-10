@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function() {
          });
       });
 
-       var navbar = $("nav").attr("data-testid['navbar']");
+       var navbar = $("nav").attr("[data-testid='navbar']");
        if(navbar) {
           $(navbar).load("/navbar.html");
        } else {
