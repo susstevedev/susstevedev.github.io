@@ -13,7 +13,6 @@ document.addEventListener("DOMContentLoaded", function() {
          });
       });
       
-      
       window.addEventListener("popstate", function() {
          var url = location.pathname + location.search;
          $("body").load(url, function(event) {
@@ -21,6 +20,13 @@ document.addEventListener("DOMContentLoaded", function() {
             history.pushState(null, "", url);
          });
       });
+
+       var navbar = $("nav").data("item-id");
+       if(navbar) {
+          $(navbar).load("/navbar.html");
+       } else {
+          console.error("Navigation bar not found on page!");
+       }
    });
 
    document.querySelector('.bio').innerText = "Hi I'm 14 (he/him, bisexual) and do web development and Lego stuff. Also Christian. Creator of Gr8Brik.";
