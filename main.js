@@ -22,7 +22,9 @@ document.addEventListener("DOMContentLoaded", function() {
          });
       });
    });
+
+   document.querySelector('.bio').innerText = "Hi I'm 14 (he/him, bisexual) and do web development and Lego stuff. Also Christian. Creator of Gr8Brik.";
 });
 
 let bio_legacy_b64 = "SGkgSSBkbyB3ZWIgZGV2ZWxvcG1lbnQuIEkgYWxzbyBsaWtlIExlZ28uIEplc3VzIGFuZCAob2xkIGVyYSkgS2FueWUgZ2xhemllci4gQWxzbyBJJ20gYmlzZXh1YWw=";
-let current_bio_b64 = "SGkgSSdtIDE0IChoZS9oaW0pIGFuZCBkbyB3ZWIgZGV2ZWxvcG1lbnQgYW5kIExlZ28gc3R1ZmYuIENocmlzdGlhbi4gQmkgYW5kIHZlcnNhdGlsZS4gSSdtIHNlY29uZCB0byBoYXZpbmcgdGhlIG1vc3QgZm9ydW0gcG9zdHMuIEFJLCBNQUdBLCBwM2RvLCBpbmMzc3QgYW5kIHJAcGUgc3VwcG9ydGVycyBETkku";
+let current_bio_b64 = "SGkgSSdtIDE0IChoZS9oaW0sIGJpKSBhbmQgZG8gd2ViIGRldmVsb3BtZW50IGFuZCBMZWdvIHN0dWZmLiBDaHJpc3RpYW4uIFN1cnZpdm9yIG9mIGxvdHMgb2YgTWVjYWJyaWNrcyBnZW5lcmF0aW9ucy4gTWVtYmVyIG9mIHRoZSBHcjhCcmlrIGFkbWluIGFuZCBkZXZlbG9wbWVudCB0ZWFtLiBJIGhhdmUgdGhlIG1vc3QgZm9ydW0gcG9zdHMuIEFJLCBNQUdBLCBxdWVlcnBob2JpYSwgcDNkbywgaW5jM3N0IGFuZCByQHBlIHN1cHBvcnRlcnMgRE5JLg==";
