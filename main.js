@@ -1,37 +1,37 @@
 (function() {
-//document.addEventListener("DOMContentLoaded", function() {
-   $(document).ready(function() {
-      $(document).on('click', 'a', function(event) {
-         var url = $(this).attr("href");
-         if (!url || url.match("^http")) {
-            return;
-         }
+   document.addEventListener("DOMContentLoaded", function() {
+      $(document).ready(function() {
+         $(document).on('click', 'a', function(event) {
+            var url = $(this).attr("href");
+            if (!url || url.match("^http")) {
+               return;
+            }
+            
+            event.preventDefault();
+            $("body").load(url, function(event) {
+               window.scrollTo(0, 0);
+               history.pushState(null, "", url);
+            });
+         });
          
-         event.preventDefault();
-         $("body").load(url, function(event) {
-            window.scrollTo(0, 0);
-            history.pushState(null, "", url);
+         window.addEventListener("popstate", function() {
+            var url = location.pathname + location.search;
+            $("body").load(url, function(event) {
+               window.scrollTo(0, 0);
+               history.pushState(null, "", url);
+            });
          });
+   
+          var navbar = $('[data-testid="navbar"]');
+          if(navbar) {
+             navbar.load("/nav.html");
+          } else {
+             console.error("Navigation bar not found on page!");
+          }
       });
-      
-      window.addEventListener("popstate", function() {
-         var url = location.pathname + location.search;
-         $("body").load(url, function(event) {
-            window.scrollTo(0, 0);
-            history.pushState(null, "", url);
-         });
-      });
-
-       var navbar = $('[data-testid="navbar"]');
-       if(navbar) {
-          navbar.load("/nav.html");
-       } else {
-          console.error("Navigation bar not found on page!");
-       }
+   
+      document.querySelector('.bio').innerText = "Hi I'm 14 (he/him, bisexual) and do web development and Lego stuff. Also Christian. Creator of Gr8Brik.";
    });
-
-   document.querySelector('.bio').innerText = "Hi I'm 14 (he/him, bisexual) and do web development and Lego stuff. Also Christian. Creator of Gr8Brik.";
-//});
 })();
 
 let bio_legacy_b64 = "SGkgSSBkbyB3ZWIgZGV2ZWxvcG1lbnQuIEkgYWxzbyBsaWtlIExlZ28uIEplc3VzIGFuZCAob2xkIGVyYSkgS2FueWUgZ2xhemllci4gQWxzbyBJJ20gYmlzZXh1YWw=";
