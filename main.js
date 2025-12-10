@@ -21,9 +21,9 @@ document.addEventListener("DOMContentLoaded", function() {
          });
       });
 
-       var navbar = $("nav").attr("[data-testid='navbar']");
+       var navbar = $('[data-testid="navbar"]');
        if(navbar) {
-          $(navbar).load("/navbar.html");
+          navbar.load("/navbar.html");
        } else {
           console.error("Navigation bar not found on page!");
        }
