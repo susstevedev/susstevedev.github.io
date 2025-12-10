@@ -31,6 +31,7 @@
                 console.error("Navigation bar not found on page!");
              }
           }
+          loadNav();
       });
    });
 })();
