@@ -11,6 +11,7 @@
             $("body").load(url, function(event) {
                window.scrollTo(0, 0);
                history.pushState(null, "", url);
+               loadNav();
             });
          });
          
