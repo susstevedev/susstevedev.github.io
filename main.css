@@ -1,4 +1,5 @@
 @import "https://cdn.jsdelivr.net/npm/bulma@latest/css/bulma.min.css";
+/*
 .pfp {
   width: 100px;
   height: 100px;
@@ -7,6 +8,7 @@
   background-size: cover;
   background-image: url("/img/pfp.png");
 }
+*/
 svg {
   width: 16px;
   height: 16px;
