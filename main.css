@@ -14,3 +14,8 @@ svg {
   height: 16px;
   fill: var(--bulma-body-color);
 }
+
+img[data-testid="gr8brik-icon"] {
+  filter: drop-shadow(0px 1000px 0 #ddd);
+  transform: translateY(-1000px);
+}
