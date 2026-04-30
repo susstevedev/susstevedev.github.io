@@ -36,5 +36,3 @@
       });
    });
 })();
-
-let current_bio_b64 = "SGkgSSdtIDE0IChoZS9oaW0sIGJpc2V4dWFsKSBhbmQgZG8gd2ViIGRldmVsb3BtZW50IGFuZCBMZWdvIHN0dWZmLiBBbHNvIENocmlzdGlhbi4gQ3JlYXRvciBvZiBHcjhCcmlrLiAiQm9vbSBzc2UyY3B1IGlzIHRoZSBjaGFvdGljIG5ldXRyYWwgb2YgdGhlIHNpdGUiIC0gIEBDYW5keWNvcm5sb3JkIERlY2VtYmVyIDIybmQsIDIwMjUgMzowMyBQTSBDU1Q=";
