@@ -1,4 +1,6 @@
 (function() {
+   window.user_name = "sse2cpu";
+   
    document.addEventListener("DOMContentLoaded", function() {
       $(document).ready(function() {
          $(document).on('click', 'a', function(event) {
@@ -27,7 +29,7 @@
           function loadNav() {
              var navbar = $('[data-testid="navbar"]');
              if(navbar) {
-                navbar.load("/nav.html");
+                navbar.load("nav.html");
              } else {
                 console.error("Navigation bar not found on page!");
              }
