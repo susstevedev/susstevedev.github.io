@@ -7,7 +7,7 @@
   // ik there's a better way to do this don't bug me about it
   do_fetch_pfp = false;
   do_fetch_bio = false;
-  do_fetch_models = true;
+  do_fetch_models = false;
   do_update_name = false;
 
   if(!search_params) {
