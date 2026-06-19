@@ -63,6 +63,12 @@ svg[data-testid="gr8brik-icon"] {
   background-image:url('/gr8brik/logo/simplelogo_lightmode.svg');
 }
 
+#img-mecabricks {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --backgroundcolor: #333333;
