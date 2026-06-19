@@ -40,14 +40,9 @@ a.button {
 }
 
 svg {
-  width: 16px;
-  height: 16px;
+  width: 20px;
+  height: 20px;
   fill: var(--antibackgroundcolor);
-}
-
-svg[data-testid="gr8brik-icon"] {
-  -webkit-filter: invert(100%);
-  filter: invert(100%);
 }
 
 .nav-social {
@@ -56,8 +51,8 @@ svg[data-testid="gr8brik-icon"] {
 
 #gr8-logo {
   display: inline-block;
-  width: 16px;
-  height: 16px;
+  width: 20px;
+  height: 20px;
   background-repeat: no-repeat;
   background-size: cover;
   background-image:url('/gr8brik/logo/simplelogo_lightmode.svg');
@@ -65,8 +60,8 @@ svg[data-testid="gr8brik-icon"] {
 
 #img-mecabricks {
   display: inline-block;
-  width: 16px;
-  height: 16px;
+  width: 20px;
+  height: 20px;
 }
 
 @media (prefers-color-scheme: dark) {
