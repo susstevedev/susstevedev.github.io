@@ -29,7 +29,8 @@ a:not(.button), a:not(.button):hover, a:not(.button):visited, a:not(.button):act
 a.button {
   cursor: pointer;
   color: #333333;
-  background-color: #d3d3d3;
+  background-color: #fafafa;
+  border-radius: 4px;
   padding: 5px 5px 5px 5px;
   text-decoration: none;
 }
