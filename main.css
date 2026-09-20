@@ -6,15 +6,20 @@
 body {
     background-color: var(--backgroundcolor);
     color: var(--antibackgroundcolor);
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 iframe {
   border: none;
 }
 
-a:not(.button), a:not(.button):hover, a:not(.button):visited, a:not(.button):active {
+a:not(.button):hover, a:not(.button):active {
   color: #d3d3d3;
+  text-decoration: none;
+}
+
+a:not(.button), a:not(.button):visited {
+  color: #333333;
   text-decoration: none;
 }
 
