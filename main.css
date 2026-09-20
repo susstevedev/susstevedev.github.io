@@ -76,9 +76,8 @@ svg {
     --antibackgroundcolor: #fafafa;
   }
 
-  .button:hover {
-    background-color: #fafafa;
-    color: #333333;
+  a:not(.button), a:not(.button):visited {
+    color: #fafafa;
   }
 
   #gr8-logo {
