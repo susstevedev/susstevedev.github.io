@@ -3,6 +3,13 @@
   let user_page;    
   let user_name;
 
+  let dos = {
+    pfp: false,
+    bio: false,
+    models: false,
+    name: false,
+  };
+
   // do or do not
   // ik there's a better way to do this don't bug me about it
   do_fetch_pfp = false;
@@ -31,7 +38,7 @@
   }
   
   function update_name() {
-    if(do_update_name) {
+    if(dos.name) {
       fetch_user_page(user_name).then(user_page => {
         document.querySelector('#username-content').innerText = user_name;
       });
@@ -39,7 +46,7 @@
   }
   
   function fetch_models() {
-    if(do_fetch_models) {
+    if(dos.models) {
       fetch_user_page(user_name).then(user_page => {
         const parser = new DOMParser();
         const doc = parser.parseFromString(user_page, 'text/html');
@@ -57,7 +64,7 @@
   }
   
   function fetch_bio() {
-    if(do_fetch_bio) {
+    if(dos.bio) {
      fetch_user_page(user_name).then(user_page => {
         const parser = new DOMParser();
         const doc = parser.parseFromString(user_page, 'text/html');
@@ -71,7 +78,7 @@
   }
   
   function fetch_pfp() {
-    if(do_fetch_pfp) {
+    if(dos.pfp) {
     fetch_user_page(user_name).then(user_page => {
       const parser = new DOMParser();
       const doc = parser.parseFromString(user_page, 'text/html');
