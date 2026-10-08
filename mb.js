@@ -1,31 +1,14 @@
+//this is legayc code that would've fetched some data from my mecabricks account
+//i still have it here because i might want to use it again for something else someday
 (function() {
   let search_params;
   let user_page;    
   let user_name;
 
   let dos = {
-    pfp: false,
     bio: false,
     models: false,
-    name: false,
   };
-
-  // do or do not
-  // ik there's a better way to do this don't bug me about it
-  do_fetch_pfp = false;
-  do_fetch_bio = false;
-  do_fetch_models = false;
-  do_update_name = false;
-
-  if(!search_params) {
-    search_params = new URLSearchParams(window.location.search);
-  }
-  
-  /*if(search_params.has('name')) {
-    user_name = search_params.get('name');
-  } else {
-    user_name = 'sse2cpu';
-  }*/
   
   user_name = window.user_name;
 
@@ -37,15 +20,7 @@
     return user_page;
   }
   
-  function update_name() {
-    if(dos.name) {
-      fetch_user_page(user_name).then(user_page => {
-        document.querySelector('#username-content').innerText = user_name;
-      });
-    }
-  }
-  
-  function fetch_models() {
+  function fetch_model() {
     if(dos.models) {
       fetch_user_page(user_name).then(user_page => {
         const parser = new DOMParser();
@@ -77,22 +52,6 @@
     }
   }
   
-  function fetch_pfp() {
-    if(dos.pfp) {
-    fetch_user_page(user_name).then(user_page => {
-      const parser = new DOMParser();
-      const doc = parser.parseFromString(user_page, 'text/html');
-      const url = doc.querySelector('#card-avatar').style.backgroundImage.slice(5, -2) ? doc.querySelector('#card-avatar').style.backgroundImage : null;
-  
-      if(url) {
-        document.querySelector('.twitter-pfp').style.backgroundImage = url;
-      }
-    });
-    }
-  }
-  
-    fetch_pfp();
     fetch_bio();
-    fetch_models();
-    update_name();
+    fetch_model();
 })();
